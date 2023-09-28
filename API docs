@@ -1,0 +1,213 @@
+The Livestream Overlay API allows you to manage custom overlay settings, including position, size, and content. This documentation provides details on the available endpoints and how to interact with them.
+
+Base URL
+The base URL for the API is: https://example.com/api
+
+Endpoints
+1. Create Overlay Setting
+Create a new overlay setting.
+
+Endpoint: /overlays
+Method: POST
+Request Body:
+{
+  "content": "Text or Image URL",
+  "position": "top-left, top-right, bottom-left, bottom-right",
+  "size": "small, medium, large"
+}
+Response:
+{
+  "id": 123,
+  "content": "Text or Image URL",
+  "position": "top-left, top-right, bottom-left, bottom-right",
+  "size": "small, medium, large"
+}
+
+
+Creating API documentation typically involves detailing the endpoints, their functionality, request and response formats, and how to interact with them. Since you mentioned that you are using Python (Flask) for your backend and React for the frontend, I'll provide a simple example of how you can document the API for your overlay settings using Swagger UI, a popular tool for API documentation. Note that you'll need to set up Swagger for Flask, which is a separate process. Below is an example of how the API documentation might look:
+
+Livestream Overlay API Documentation
+Overview
+The Livestream Overlay API allows you to manage custom overlay settings, including position, size, and content. This documentation provides details on the available endpoints and how to interact with them.
+
+Base URL
+The base URL for the API is: https://example.com/api
+
+Endpoints
+1. Create Overlay Setting
+Create a new overlay setting.
+
+Endpoint: /overlays
+Method: POST
+Request Body:
+
+{
+  "content": "Text or Image URL",
+  "position": "top-left, top-right, bottom-left, bottom-right",
+  "size": "small, medium, large"
+}
+
+Response:
+
+{
+  "id": 123,
+  "content": "Text or Image URL",
+  "position": "top-left, top-right, bottom-left, bottom-right",
+  "size": "small, medium, large"
+}
+2. Get All Overlay Settings
+Retrieve a list of all overlay settings.
+
+Endpoint: /overlays
+Method: GET
+Response:
+[
+  {
+    "id": 1,
+    "content": "Saved Overlay 1",
+    "position": "top-left",
+    "size": "small"
+  },
+  {
+    "id": 2,
+    "content": "Saved Overlay 2",
+    "position": "bottom-right",
+    "size": "large"
+  }
+]
+
+
+
+3. Get Overlay Setting by ID
+Retrieve a specific overlay setting by its ID.
+
+Endpoint: /overlays/{id}
+Method: GET
+Response:
+
+{
+  "id": 1,
+  "content": "Saved Overlay 1",
+  "position": "top-left",
+  "size": "small"
+}
+
+4. Update Overlay Setting
+Update an existing overlay setting by its ID.
+
+Endpoint: /overlays/{id}
+Method: PUT
+Request Body:
+{
+  "content": "Updated Text or Image URL",
+  "position": "top-left, top-right, bottom-left, bottom-right",
+  "size": "small, medium, large"
+}
+
+
+Creating API documentation typically involves detailing the endpoints, their functionality, request and response formats, and how to interact with them. Since you mentioned that you are using Python (Flask) for your backend and React for the frontend, I'll provide a simple example of how you can document the API for your overlay settings using Swagger UI, a popular tool for API documentation. Note that you'll need to set up Swagger for Flask, which is a separate process. Below is an example of how the API documentation might look:
+
+Livestream Overlay API Documentation
+Overview
+The Livestream Overlay API allows you to manage custom overlay settings, including position, size, and content. This documentation provides details on the available endpoints and how to interact with them.
+
+Base URL
+The base URL for the API is: https://example.com/api
+
+Endpoints
+1. Create Overlay Setting
+Create a new overlay setting.
+
+Endpoint: /overlays
+Method: POST
+Request Body:
+json
+Copy code
+{
+  "content": "Text or Image URL",
+  "position": "top-left, top-right, bottom-left, bottom-right",
+  "size": "small, medium, large"
+}
+Response:
+json
+Copy code
+{
+  "id": 123,
+  "content": "Text or Image URL",
+  "position": "top-left, top-right, bottom-left, bottom-right",
+  "size": "small, medium, large"
+}
+2. Get All Overlay Settings
+Retrieve a list of all overlay settings.
+
+Endpoint: /overlays
+Method: GET
+Response:
+json
+Copy code
+[
+  {
+    "id": 1,
+    "content": "Saved Overlay 1",
+    "position": "top-left",
+    "size": "small"
+  },
+  {
+    "id": 2,
+    "content": "Saved Overlay 2",
+    "position": "bottom-right",
+    "size": "large"
+  }
+]
+3. Get Overlay Setting by ID
+Retrieve a specific overlay setting by its ID.
+
+Endpoint: /overlays/{id}
+Method: GET
+Response:
+json
+Copy code
+{
+  "id": 1,
+  "content": "Saved Overlay 1",
+  "position": "top-left",
+  "size": "small"
+}
+4. Update Overlay Setting
+Update an existing overlay setting by its ID.
+
+Endpoint: /overlays/{id}
+Method: PUT
+Request Body:
+json
+Copy code
+{
+  "content": "Updated Text or Image URL",
+  "position": "top-left, top-right, bottom-left, bottom-right",
+  "size": "small, medium, large"
+}
+Response:
+{
+  "id": 1,
+  "content": "Updated Text or Image URL",
+  "position": "top-left",
+  "size": "small"
+}
+
+5. Delete Overlay Setting
+Delete an existing overlay setting by its ID.
+
+Endpoint: /overlays/{id}
+Method: DELETE
+Response: 204 No Content
+
+
+
+Usage
+You can interact with the Livestream Overlay API by making HTTP requests to the provided endpoints using your frontend application.
+
+Please note that this is a simplified example, and in a real-world application, you should provide more detailed information, including authentication requirements, error handling, and any additional endpoints your application may have.
+
+Additionally, the base URL and endpoint paths should be adjusted to match your actual server and routing configuration. You can use Swagger UI or other API documentation tools to generate interactive API documentation for your users.
+
+
